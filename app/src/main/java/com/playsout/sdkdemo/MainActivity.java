@@ -25,44 +25,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setupWindowInsets();
         setupFlutterLaunchButton();
-        /*
-        findViewById(R.id.clickme).setOnClickListener(v -> {
-            try {
-                Intent intent = FlutterActivity
-                        .withNewEngine()
-                        .initialRoute("/")
-                        // Specify initial route if needed
-                        .build(MainActivity.this);
-                startActivity(intent);
-            }catch (Exception pe)
-            {
-                Log.d("errorjhhg",pe.getMessage()+"");
-                Toast.makeText(MainActivity.this, "error "+pe.getMessage(), Toast.LENGTH_SHORT).show();
-            }
-
-
-        });
-        new Handler(Looper.myLooper()).postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-            }
-        },2000);
-
-         */
-
-
-       // FlutterActivity.createDefaultIntent(this);
-       /* try {
-            Class<?> c = Class.forName("com.example.my_flutter_two.Access");
-            startActivity(new Intent(this, c));
-            Toast.makeText(this, "goog to go", Toast.LENGTH_SHORT).show();
-        } catch (ClassNotFoundException e) {
-            Toast.makeText(this, "erro :"+e.getMessage(), Toast.LENGTH_SHORT).show();
-
-          //  throw new RuntimeException(e);
-        }*/
-
 
     }
     private void setupWindowInsets() {
@@ -93,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void handleLaunchError(Exception e) {
         Log.e("FlutterLaunch", "Error: " + e.getMessage(), e);
-        Toast.makeText(this, "启动失败: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "run failed: " + e.getMessage(), Toast.LENGTH_SHORT).show();
     }
     @Override
     public void onTrimMemory(int level) {
