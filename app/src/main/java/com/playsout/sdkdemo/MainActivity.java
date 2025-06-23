@@ -43,9 +43,6 @@ public class MainActivity extends AppCompatActivity {
         try {
             Intent intent = FlutterActivity
                     .withCachedEngine(CacheId.PLAYSOUT_ENGINE_ID)
-                    //.initialRoute("/")
-                    //.withCachedEngine("default_engine")
-                    //.initialRoute("/")
                     .build(MainActivity.this);
             startActivity(intent);
         } catch (Exception e) {
