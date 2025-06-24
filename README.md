@@ -43,8 +43,18 @@ https://docs.flutter.dev/add-to-app/ios
 
 This section explains how to quickly integrate the Playsout Mini Game component into an Android project(iOS integration is similar). You will complete the following key steps and ultimately implement a mini-game feature with a complete UI.
 <div align="center">
-  <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/appui1.png?raw=true" alt="appui1" style="display: inline-block; margin: 0 5px; vertical-align: middle;" />
-  <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/game1.png?raw=true" alt="game1" style="display: inline-block; margin: 0 5px; vertical-align: middle;" />
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/appui1.png?raw=true" alt="appui1" width="300" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/game1.png?raw=true" alt="game1" width="300" />
+    </td>
+  </tr>
+</table>
+
 </div>
 
 ### 1) Environment Preparation
