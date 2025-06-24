@@ -9,6 +9,9 @@ Playsout Mini Game Container SDK is developed using Flutter + C++ at the underly
 If you wish to incorporate Playsout Mini-Game Container capabilities into your existing App, we recommend adopting a hybrid development approach by embedding the Flutter module into your native App project.
 
 This significantly reduces workload and enables rapid implementation of Playsout Mini-Game Container functionality in both Android and iOS native Apps.
+<div align="center">
+  <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/hybrid.png?raw=true" alt="hybrid" />
+</div>
 
 ### Environment Requirements
 
@@ -40,7 +43,8 @@ https://docs.flutter.dev/add-to-app/ios
 
 This section explains how to quickly integrate the Playsout Mini Game component into an Android project(iOS integration is similar). You will complete the following key steps and ultimately implement a mini-game feature with a complete UI.
 <div align="center">
-  <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/hybrid.png?raw=true" alt="hybrid" />
+  <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/appui1.png?raw=true" alt="appui1" />
+  <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/game1.png?raw=true" alt="game1" />
 </div>
 
 ### 1) Environment Preparation
