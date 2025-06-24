@@ -1,3 +1,8 @@
+<video width="640" height="360" controls>
+  <source src="https://github.com/Playsout/playsoutsdk_demo_android/raw/main/docs/videos/demo.mp4" type="video/mp4">
+  您的浏览器不支持视频标签。
+</video>
+
 # Playsout SDK Integration
 
 ## 1. Overview
