@@ -69,17 +69,42 @@ Physical device running Android 5.0 or later.
 
 Before using the Playsout Mini Game Container service, you need to enable the service for your app(contact business partners to access the control platform). After enabling the service, note down the SDKAppID and SDKSecretKey, which will be used in subsequent steps.
 
+<div align="center">
+  <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/channel_key.png?raw=true" alt="channel_key" />
+</div>
+
 ### 3) SDK Import and Configuration
 
 Download playsoutsdk(https://github.com/Playsout/Playsout_sdk_android), add Maven repository configuration in settings.gradle.kts
+<div align="center">
+  <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/config1.png?raw=true" alt="config1" />
+</div>
+
 
 Add SDK library dependency in app/build.gradle.kts
+<div align="center">
+  <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/config2.png?raw=true" alt="config2" />
+</div>
 
 Add required configurations in AndroidManifest.xml referencing demo:
+<div align="center">
+  <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/config3.png?raw=true" alt="config3" />
+</div>
 
 ### 4) Initialize the Playsout SDK
 
 Add the following code to your project. Its purpose is to complete the Playsout SDK login by calling relevant interfaces. This step is critical only after successful login can you use Playsout's features.
+```java
+public void onCreate() {
+        super.onCreate();
+        // Instance FlutterEngine ，cache
+        FlutterEngine flutterEngine = new FlutterEngine(this);
+        flutterEngine.getNavigationChannel().setInitialRoute("/home?channel=playsout&sdkkey=123456");
+
+        flutterEngine.getDartExecutor().executeDartEntrypoint(DartExecutor.DartEntrypoint.createDefault());
+        FlutterEngineCache.getInstance().put(CacheId.PLAYSOUT_ENGINE_ID, flutterEngine);
+    }
+```
 
 ### 5) Opening the Mini Game Library and Launching Your First Game
 
@@ -95,3 +120,17 @@ private void launchFlutterActivity() {
     }
 }
 ```
+<div align="center">
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/appui2.png?raw=true" alt="appui2" width="300" />
+    </td>
+    <td align="center">
+      <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/game2.png?raw=true" alt="game2" width="300" />
+    </td>
+  </tr>
+</table>
+
+</div>
