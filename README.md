@@ -3,9 +3,9 @@
 
 <div align="center">
   <a href="https://github.com/Playsout/playsoutsdk_demo_android/raw/main/docs/videos/demo.mp4">
-    <img src="path-to-thumbnail.jpg" alt="演示视频封面" width="600">
+    <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/appui1.png" alt="demo video">
   </a>
-  <p><strong>[点击观看视频演示]</strong></p>
+  <p><strong>[click to view demo video]</strong></p>
 </div>
 
 ## 1. Overview
