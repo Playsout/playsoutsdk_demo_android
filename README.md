@@ -150,6 +150,7 @@ private void launchFlutterActivity() {
   <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/config3.png?raw=true" alt="config3" />
 </div>
 3.Modify the code to use your rewarded ad ID.
+
 ```java
 	MethodChannel channel = new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), CHANNEL);
         HashMap<String, Object> arguments = new HashMap<>();
