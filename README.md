@@ -142,3 +142,32 @@ private void launchFlutterActivity() {
 </table>
 
 </div>
+
+### 6) How to add your admob AD
+1.Register with AdMob, add two rewarded ad uints.
+2.Add required configurations in AndroidManifest.xml referencing demo:
+<div align="center">
+  <img src="https://github.com/Playsout/playsoutsdk_demo_android/blob/main/docs/images/config3.png?raw=true" alt="config3" />
+</div>
+3.Modify the code to use your rewarded ad ID.
+```java
+	MethodChannel channel = new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), CHANNEL);
+        HashMap<String, Object> arguments = new HashMap<>();
+        arguments.put("appAdId", "ca-app-pub-3940256099942544/1712485313"); // change them by your admob ad ID
+        arguments.put("gameAdId", "ca-app-pub-3940256099942544/1712485313");
+        channel.invokeMethod("init",arguments);
+```
+
+### 7) How to add your in app purchase
+In your Play Store , add the following consumable in-app purchase items to your app.
+'com.playsout.minigames.gems12', US$0.99
+
+'com.playsout.minigames.gems60', US$4.99
+
+'com.playsout.minigames.gems180', US$14.99
+
+'com.playsout.minigames.gems360', US$29.99
+
+'com.playsout.minigames.gems600', US$49.99
+
+'com.playsout.minigames.gems1200', US$99.99
