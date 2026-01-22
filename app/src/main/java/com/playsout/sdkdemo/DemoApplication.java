@@ -17,7 +17,7 @@ public class DemoApplication extends Application {
 
 	// Instance FlutterEngine ，cache        
         FlutterEngine flutterEngine = new FlutterEngine(this);
-        flutterEngine.getNavigationChannel().setInitialRoute("/home?channel=playsout&sdkkey=eyJ2ZXIiOiJ2MSIsImNoYW5uZWwiOiJwbGF5c291dCIsInBhY2thZ2VuYW1lIjoiIiwiZXhwIjoxNzY3NzcyNjk1fQ==3M"); //update if sdkkey expire,look log
+        flutterEngine.getNavigationChannel().setInitialRoute("/home?channel=playsout&sdkkey=eyJ2ZXIiOiJ2MSIsImNoYW5uZWwiOiJwbGF5c291dCIsInBhY2thZ2VuYW1lIjoiY29tLnBsYXlzb3V0LnNka2RlbW8iLCJleHAiOjE3NzE2NjY4MzV93Q"); //update if sdkkey expire,look log
 
         flutterEngine.getDartExecutor().executeDartEntrypoint(DartExecutor.DartEntrypoint.createDefault());
 
