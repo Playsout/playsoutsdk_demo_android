@@ -13,10 +13,15 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.HashMap;
+
 import io.flutter.embedding.android.FlutterActivity;
+import io.flutter.embedding.engine.FlutterEngine;
+import io.flutter.embedding.engine.FlutterEngineCache;
+import io.flutter.plugin.common.MethodChannel;
 
 public class MainActivity extends AppCompatActivity {
-
+    private static final String CHANNEL = "com.playsout.minigames";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,15 +41,49 @@ public class MainActivity extends AppCompatActivity {
     }
     private void setupFlutterLaunchButton() {
         findViewById(R.id.clickme).setOnClickListener(v -> {
-            launchFlutterActivity();
+            launchPlaysoutActivity();
+        });
+        findViewById(R.id.clickme2).setOnClickListener(v -> {
+            launchGameActivity();
         });
     }
-    private void launchFlutterActivity() {
+    private void launchPlaysoutActivity() {
         try {
-            Intent intent = FlutterActivity
-                    .withCachedEngine(CacheId.PLAYSOUT_ENGINE_ID)
-                    .build(MainActivity.this);
-            startActivity(intent);
+            FlutterEngine flutterEngine = FlutterEngineCache.getInstance().get(CacheId.PLAYSOUT_ENGINE_ID);
+            if(flutterEngine!=null) {
+                MethodChannel channel = new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), CHANNEL);
+                HashMap<String, Object> arguments = new HashMap<>();
+                arguments.put("appAdId", "ca-app-pub-3940256099942544/1712485313"); // change them by your admob ad ID
+                arguments.put("gameAdId", "ca-app-pub-3940256099942544/1712485313");
+                channel.invokeMethod("init", arguments);
+
+                Intent intent = FlutterActivity
+                        .withCachedEngine(CacheId.PLAYSOUT_ENGINE_ID)
+                        .build(MainActivity.this);
+                startActivity(intent);
+            }
+        } catch (Exception e) {
+            handleLaunchError(e);
+        }
+    }
+
+    private void launchGameActivity() {
+        try {
+            FlutterEngine flutterEngine = FlutterEngineCache.getInstance().get(CacheId.PLAYSOUT_ENGINE_ID);
+            if(flutterEngine!=null) {
+                MethodChannel channel = new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), CHANNEL);
+                HashMap<String, Object> arguments = new HashMap<>();
+                arguments.put("appAdId", "ca-app-pub-3940256099942544/1712485313"); // change them by your admob ad ID
+                arguments.put("gameAdId", "ca-app-pub-3940256099942544/1712485313");
+                arguments.put("gameId", "poiv5z171lslnuof0g");
+                arguments.put("gameTitle", "KittyCrushSaga");
+                channel.invokeMethod("init", arguments);
+
+                Intent intent = FlutterActivity
+                        .withCachedEngine(CacheId.PLAYSOUT_ENGINE_ID)
+                        .build(MainActivity.this);
+                startActivity(intent);
+            }
         } catch (Exception e) {
             handleLaunchError(e);
         }

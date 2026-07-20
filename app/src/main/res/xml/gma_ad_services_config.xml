@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ad-services-config>
+    <!-- Permit SDK use Android Privacy Sandbox API -->
+    <attestation auditing="required" />
+</ad-services-config>
